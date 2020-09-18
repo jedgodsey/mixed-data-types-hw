@@ -28,7 +28,7 @@ let spaceShipFeatures = ['hull', 'laser blasters', 'tractor beam', 'warp drive']
 let arrayStrings = ['Jimmy', 'Jane', 'Tommy']
 //   * A list of student names from our class, each with a location.
 // an array of objects: 
-let objectsArray = [jimmy: 'Tucson', pamela: 'Marana', sergio: 'Hermosillo']
+let objectsArray = [{jimmy: 'Tucson'}, {pamela: 'Marana'}, {sergio: 'Hermosillo'}]
 
 //   * A list of student names from our class, each with a location and each with a list of favorite tv shows.
 // an object of objects and arrays:
@@ -49,7 +49,7 @@ let nestedObjects = {
 // 1. Make an array that holds all of the colors of the rainbow.
 let rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 // 2. Write code that will access "blue" from the rainbow array.
-let access = rainbow(4);
+let access = rainbow[4];
 // 3. Make an object that is called your name and holds the information about your favorite food, a hobby, the name of the town that you live in currently, and your favorite datatype.
 let jed = {
     favFood: 'tacos',
@@ -60,56 +60,52 @@ let jed = {
 // 4. Write code that will access your hobby from the object that you just created.
 let jedHobby = jed.hobby;
 
-// ---
-
-// &#x1F534; **Commit:** "data structures"
-
-// ---
-
-
 // ### 3. Crazy Object!
 
-// ```javascript
-// const crazyObject = {
-//   taco: [
-//     {
-//       meat: 'steak',
-//       cheese: ['panela', 'queso', 'chihuahua']
-//     },
-//     {
-//       meat: 'chicken',
-//       salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
-//     },
-//   ],
-//   larry: {
-//     nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
-//     quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
-//     characters: [
-//       {
-//         name: "Jeff",
-//         occupation: "manager"
-//       },
-//       {
-//         name: "funkhauser",
-//         occupation: "tv dude"
-//       },
-//       {
-//         name: "susie",
-//         occupation: "jeffs wife",
-//         favourtieHobby: "Swearing at Larry and Jeff"
-//       },
-//     ]
-//   }
-// }
-// ```
+const crazyObject = {
+  taco: [
+    {
+      meat: 'steak',
+      cheese: ['panela', 'queso', 'chihuahua']
+    },
+    {
+      meat: 'chicken',
+      salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
+    },
+  ],
+  larry: {
+    nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
+    quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
+    characters: [
+      {
+        name: "Jeff",
+        occupation: "manager"
+      },
+      {
+        name: "funkhauser",
+        occupation: "tv dude"
+      },
+      {
+        name: "susie",
+        occupation: "jeffs wife",
+        favourtieHobby: "Swearing at Larry and Jeff"
+      },
+    ]
+  }
+}
+
 
 // Use crazyObject to log the following.
-
 //   * "omg my mouth is burning"
+console.log(crazyObject.taco[1].salsa[5]);
 //   * "Pretty pretty prettayyyyy good"
+console.log(crazyObject.larry.quotes[0]);
 //   * "Swearing at Larry and Jeff"
+console.log(crazyObject.larry.characters[2].favourtieHobby);
 //   * "Chicken Teriyaki Boyyyyyy"
+console.log(crazyObject.larry.nicknames[1]);
 //   * The object the contains the name `funkhauser`
+console.log(crazyObject.larry.characters[1]);
 
 // ---
 
