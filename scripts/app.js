@@ -180,12 +180,10 @@ console.log(bondTitles);
 let oddBonds = bondFilms.filter(item => item.year % 2 == 1);
 console.log(oddBonds);
 
-//   &#x1F534; **Commit:** "oddBonds"
-
-
 // 7. Determine the total cumulative gross of the Bond franchise, and console.log the result. 
 //   > _Hint_: To make the grosses into usable numbers, look into the `.replace` Javascript method (there are many ways to do this, however). Look into `parseInt()` also.  
-
+let bondCash = bondFilms.map(item => item.gross.split(/\D/).join('')).map(item => parseInt(item)).reduce((a,b) => a + b);
+console.log(bondCash);
 //   &#x1F534; **Commit:** "bond films gross"
 
 
