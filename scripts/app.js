@@ -95,52 +95,47 @@ const crazyObject = {
 }
 
 
-// Use crazyObject to log the following.
-//   * "omg my mouth is burning"
-console.log(crazyObject.taco[1].salsa[5]);
-//   * "Pretty pretty prettayyyyy good"
-console.log(crazyObject.larry.quotes[0]);
-//   * "Swearing at Larry and Jeff"
-console.log(crazyObject.larry.characters[2].favourtieHobby);
-//   * "Chicken Teriyaki Boyyyyyy"
-console.log(crazyObject.larry.nicknames[1]);
-//   * The object the contains the name `funkhauser`
-console.log(crazyObject.larry.characters[1]);
-
-// ---
-
-// &#x1F534; **Commit:** "crazyObject"
-
-// ---
+// // Use crazyObject to log the following.
+// //   * "omg my mouth is burning"
+// console.log(crazyObject.taco[1].salsa[5]);
+// //   * "Pretty pretty prettayyyyy good"
+// console.log(crazyObject.larry.quotes[0]);
+// //   * "Swearing at Larry and Jeff"
+// console.log(crazyObject.larry.characters[2].favourtieHobby);
+// //   * "Chicken Teriyaki Boyyyyyy"
+// console.log(crazyObject.larry.nicknames[1]);
+// //   * The object the contains the name `funkhauser`
+// console.log(crazyObject.larry.characters[1]);
 
 
 // ### 4. Object-ception
 
 // With the following object:
 
-// ```js
-// const inception = {
-//    reality: {
-//        dreamLayer1: {
-//            dreamLayer2: {
-//                dreamLayer3: {
-//                    dreamLayer4: {
-//                        dreamLayer5: {
-//                            dreamLayer6: {
-//                                limbo: "Joseph Gordon Levitt"
-//                           }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-// }
-// ```
 
-// Change the value of `limbo` to `null`.
+const inception = {
+   reality: {
+       dreamLayer1: {
+           dreamLayer2: {
+               dreamLayer3: {
+                   dreamLayer4: {
+                       dreamLayer5: {
+                           dreamLayer6: {
+                               limbo: "Joseph Gordon Levitt"
+                          }
+                       }
+                   }
+               }
+           }
+       }
+   }
+}
 
-// ---
+
+
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
+
+console.log(inception);
 
 // &#x1F534; **Commit:** "object-ception"
 
