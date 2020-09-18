@@ -174,10 +174,11 @@ const bondFilms = [
 let bondTitles = bondFilms.map(item => item.title);
 console.log(bondTitles);
 
-//   &#x1F534; **Commit:** "bondTitles array"
-
 
 // 6. Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.
+
+let oddBonds = bondFilms.filter(item => item.year % 2 == 1);
+console.log(oddBonds);
 
 //   &#x1F534; **Commit:** "oddBonds"
 
