@@ -184,46 +184,37 @@ console.log(oddBonds);
 //   > _Hint_: To make the grosses into usable numbers, look into the `.replace` Javascript method (there are many ways to do this, however). Look into `parseInt()` also.  
 let bondCash = bondFilms.map(item => item.gross.split(/\D/).join('')).map(item => parseInt(item)).reduce((a,b) => a + b);
 console.log(bondCash);
-//   &#x1F534; **Commit:** "bond films gross"
-
-
-
-// #### Congrats! You have completed the homework
-
-// <br>
-// <hr>
-
-// # Hungry For More?
 
 
 // #### Console log the single movie **object** that contains the actor who starred in the least number of films.
 
+let totals = {};
+// adapted a portion of this code from stackOverflow research
+for (var i = 0; i < bondFilms.length; i++) {
+  var num = bondFilms[i].actor;
+  totals[num] = totals[num] ? totals[num] + 1 : 1;
+}
+
+let sorted = Object.entries(totals).sort((a,b) => a[1] - b[1]);
+
+for (let j = 0; j < bondFilms.length; j++) {
+  if (bondFilms[j].actor == sorted[0][0]) {
+    console.log(bondFilms[j]);
+  }
+}
+
 // Expected result:
 
-// ```js
+
 // { 
 //   "title" : "On Her Majesty's Secret Service", 
 //   "year" : 1969, 
 //   "actor" : "George Lazenby", 
 //   "gross" : "$505,899,782" 
 // }
-// ```
+
 
 // > _hint:_ Objects by definition have **unique** keys. Later in the problem you could create a new object wherein all the Bond actors are keys, and unique, with no doubles. _hint within a hint:_ If you need to iterate over an object, remember you can use [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) or a [`for ... in` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 
 // &#x1F534; **Commit** "humdinger"
 // <hr>
-
-// # Hungry For Quite a bit more?
-
-// Complete this [advanced object lab using weather data](https://git.generalassemb.ly/sf-sei-3/weather-object-lab), committing as you go.
-
-// ## Hungry for CSS stuff?
-
-// Some tasty CSS videos:
-
-// * [Box Model](https://www.youtube.com/watch?v=HNgdhp1_kEE&index=6&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 7:17
-// * [CSS Display](https://www.youtube.com/watch?v=qjSe_K3agYc&index=7&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 6:24
-// * [Positioning](https://www.youtube.com/watch?v=zH8kjJdvmOs&index=8&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 11:57
-// * [Units of measure I](https://www.youtube.com/watch?v=5axuSSBIMuQ&index=9&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 10:25
-// * [Units of measure II](https://www.youtube.com/watch?v=ZfxNpQm6m2g&index=10&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 14:27
